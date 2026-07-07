@@ -1,0 +1,16 @@
+[package]
+name = "shared"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "lib", "staticlib"]
+
+[dependencies]
+crux_core = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+
+[dev-dependencies]
+crux_core = { workspace = true, features = ["testing"] }
